@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS For Designers - Airbnb page exercise</title>
+    <!-- <link href="project-01.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        
+        * {
+            box-sizing: inherit;
+            background-position: top center;
+            background-size: cover;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: whitesmoke;
+            padding: 10% 10%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1553104139-0e0050b39fdf?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+        }
+        
+        .container-body {
+            padding: 32px 80px 16px
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            border: 3px solid snow;
+            border-radius: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10% 10%;
+            }
+        }
+        
+        div.footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            color: darkslateblue;
+            background-color: lightgray;
+            width: 100%;
+            height: 30px;
+        }
+        
+        #list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #list-item {
+            padding: 5px;
+            flex-basis: 200px;
+            flex-grow: 1;
+        }
+        
+        .image {
+            height: 240px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .image-1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1101&q=80");
+        }
+        
+        .image-2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=906&q=80');
+        }
+        
+        .image-3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-5 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-6 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-1:hover {
+            background-image: url("https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1101&q=80");
+        }
+        
+        .image-2:hover {
+            background-image: url('https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=906&q=80');
+        }
+        
+        .image-3:hover {
+            background-image: url('https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-4:hover {
+            background-image: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-5:hover {
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .image-6:hover {
+            background-image: url('https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+        }
+        
+        .T2 .tooltiptext {
+            visibility: hidden;
+        }
+        
+        .T2:hover .tooltiptext {
+            visibility: visible;
+        }
+        
+        ;
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="T1">
+            <h1>Welcome to my world</h1>
+            <p>My name is Saranruk Janbradab.</p>
+        </div>
+        <div class="T2"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=987&q=80" /><span class="tooltiptext">Hungry!</span></div>
+    </div>
+    <div class="container-body ">
+        <h2>Introduct myself</h2>
+        <p>You know What i need?</p>
+    </div>
+    <div id="list" class="container-body">
+        <div id="list-item">
+            <div class="image image-1"></div>
+            <p>A cat</p>
+        </div>
+        <div id="list-item">
+            <div class="image image-2"></div>
+            <p>Condo</p>
+        </div>
+        <div id="list-item">
+
+            <div class="image image-3"></div>
+            <p>House</p>
+        </div>
+        <div id="list-item">
+            <div class="image image-4"></div>
+            <p>Motocycle</p>
+        </div>
+        <div id="list-item">
+            <div class="image image-5"></div>
+            <p>Food</p>
+        </div>
+        <div id="list-item">
+            <div class="image image-6"></div>
+            <p>Money</p>
+        </div>
+    </div>
+    <div class="container-body">
+        <hr/>
+        <p>© 2019, Now give me a money.</p>
+    </div>
+    <div class="footer">
+        <p style=" margin: 0;
+        padding: 5px;
+        text-align: center;border: 1px solid #333333">Hey! So cool.</p>
+    </div>
+</body>
+
+</html>
